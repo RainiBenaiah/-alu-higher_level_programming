@@ -1,4 +1,4 @@
-    #!/usr/bin/python3
+#!/usr/bin/python3
 """Python function that returns json file"""
 
 
