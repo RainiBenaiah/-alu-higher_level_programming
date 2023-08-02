@@ -1,3 +1,3 @@
-"""creates the database hbtn_0c_0"""
+--creating database
 
 CREATE DATABASE hbtn_0c_0();
