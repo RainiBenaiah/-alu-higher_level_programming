@@ -1,13 +1,14 @@
 #!/usr/bin/node
-const num = process.argv[2];
-
-const integers = num.map(num => parseInt(num)).filter(Number.isInteger);
-
-if (integers.length < 2) {
-  console.log(0);
-} else {
- 
-  const sortedIntegers = integers.sort((a, b) => b - a);
-  const secondBiggest = sortedIntegers[1];
-  console.log(secondBiggest);
+let large = 0;
+let seclarge = 0;
+for (let a = 2; a < process.argv.length; a++) {
+  const current = parseInt(process.argv[a]);
+  if (current > large) {
+    seclarge = large;
+    large = current;
+  }
+  if (current > seclarge && current < large) {
+    seclarge = current;
+  }
 }
+console.log(seclarge);
