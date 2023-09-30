@@ -5,3 +5,4 @@ function factor(a) {
   }
   return n * factor(a - 1);
 }
+console.log(factor(parseInt(process.argv[2])));
