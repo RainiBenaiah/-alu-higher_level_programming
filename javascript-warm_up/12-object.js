@@ -4,5 +4,5 @@ const oobject = {
   value: 12
 };
 console.log(oobject);
-myObject.value = 89;
+oobject.value = 89;
 console.log(oobject);
