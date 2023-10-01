@@ -1,15 +1,11 @@
 #!/usr/bin/node
-const { dict } = require('./101-data');
-
-const sortedDict = {};
-
+const dict = require('./101-data.js').dict;
+const newDict = {};
 for (const key in dict) {
-  const occurrence = dict[key];
-  if (occurrence in sortedDict) {
-    sortedDict[occurrence].push(key);
+  if (newDict[dict[key]] === undefined) {
+    newDict[dict[key]] = [key];
   } else {
-    sortedDict[occurrence] = [key];
+    newDict[dict[key]].push(key);
   }
 }
-
-console.log(sortedDict);
+console.log(newDict);
